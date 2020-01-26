@@ -1,0 +1,36 @@
+<Template>
+  <SetVariable name="group">[Channel<Variable name="channum"/>]</SetVariable>
+  <WidgetGroup>
+    <ObjectName>Deck<Variable name="channum" /></ObjectName>
+    <Layout>horizontal</Layout>
+    <SizePolicy>me,min</SizePolicy>
+    <Children>
+      <WidgetGroup>  <!-- Deck Channel
+        <ObjectName>Deck<Variable name="channum" /></ObjectName> -->
+        <SizePolicy>me,min</SizePolicy>
+        <Layout>vertical</Layout>
+        <Children>
+          
+          <Template src="skin:deck_row_2_3_4.xml" />
+          <Template src="skin:deck_row_5.xml" />
+
+          <WidgetGroup>
+            <Size>0me,50min</Size>
+            <Layout>vertical</Layout>
+            <Children>
+              <Template src="skin:waveform.xml">
+                <SetVariable name="signal_color">#E7C413</SetVariable>
+                <SetVariable name="SignalBgColor">#2f290a</SetVariable>
+                <SetVariable name="SignalRGBLowColor">#ff2a00</SetVariable>
+                <SetVariable name="SignalRGBMidColor">#33f600</SetVariable>
+                <SetVariable name="SignalRGBHighColor">#332acc</SetVariable>
+              </Template>
+            </Children>
+          </WidgetGroup>
+
+          <Template src="skin:deck_buttons.xml" />
+        </Children>
+      </WidgetGroup> <!-- /Deck Channel1 -->
+    </Children>
+  </WidgetGroup>
+</Template>
